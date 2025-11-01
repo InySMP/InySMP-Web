@@ -1,0 +1,293 @@
+/* --- Global Styles and Background (Enhanced) --- */
+body {
+    font-family: 'Consolas', 'Courier New', monospace; /* 使用等寬字體模擬終端機 */
+    margin: 0;
+    padding-top: 70px; 
+    color: #fff; 
+    /* 調整為 50% 黑暗覆蓋層，讓科幻霓虹效果更突出 */
+    background: 
+        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+        url('https://images3.alphacoders.com/133/thumb-1920-1339742.jpeg') no-repeat center center fixed;
+    background-size: cover;
+    min-height: 100vh;
+    /* 讓整個畫面有一點點的模糊，營造科幻HUD的感覺 */
+    text-shadow: 0 0 5px rgba(0, 255, 255, 0.4); 
+}
+
+/* --- Colors and Neon Glow --- */
+.aqua { color: #00ffff; } 
+.green { color: #00ff00; } 
+
+.neon-glow {
+    /* 應用霓虹光暈效果 */
+    text-shadow: 
+        0 0 5px #00ffff,
+        0 0 10px #00ff00; 
+}
+
+/* --- Navbar Styling (置中點分隔) --- */
+.navbar {
+    /* ... (保持 fixed 屬性) */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center; /* 置中導航連結 */
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 2px solid #00ffff; /* 增加科幻邊框 */
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.5); /* 霓虹陰影 */
+    z-index: 1000;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+}
+
+.navbar a {
+    color: #00ffff; /* 霓虹藍 */
+    text-decoration: none;
+    padding: 0 15px;
+    font-weight: bold;
+    transition: color 0.3s;
+    text-transform: uppercase;
+}
+
+.navbar a:hover {
+    color: #00ff00; /* 懸停變為霓虹綠 */
+    text-shadow: 0 0 10px #00ff00;
+}
+
+.separator {
+    color: #fff;
+    margin: 0 5px;
+    opacity: 0.5; /* 分隔符較暗 */
+}
+
+/* --- Main Content and Terminal Panels --- */
+.main-content {
+    padding: 40px 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.terminal-panel {
+    background-color: rgba(10, 20, 30, 0.9); /* 較深的背景 */
+    padding: 25px;
+    margin-bottom: 30px;
+    border: 1px solid #00ffff; /* 霓虹邊框 */
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.4);
+    border-radius: 4px;
+    overflow: hidden;
+    position: relative;
+}
+
+/* 終端機光標動畫 */
+.terminal-panel::before {
+    content: '_';
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: #00ff00;
+    animation: blink-cursor 1s step-end infinite;
+}
+
+@keyframes blink-cursor {
+    from, to { opacity: 0; }
+    50% { opacity: 1; }
+}
+
+/* --- Hero Section (Title and Player Count) --- */
+.hero-section {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.hero-title {
+    font-size: 6em;
+    margin: 0;
+    text-transform: uppercase;
+    line-height: 1;
+}
+
+/* 動畫/脈衝效果保持不變 */
+@keyframes pulse {
+    0% { transform: scale(1); opacity: 1; text-shadow: 0 0 5px #00ffff; }
+    50% { transform: scale(1.05); opacity: 0.8; text-shadow: 0 0 20px #00ff00; }
+    100% { transform: scale(1); opacity: 1; text-shadow: 0 0 5px #00ffff; }
+}
+.animated-text {
+    display: inline-block;
+    animation: pulse 3s infinite alternate; 
+    /* stagger delay remains the same */
+}
+
+/* Glitch Effect (Optional, but very sci-fi) */
+.glitch-effect {
+    position: relative;
+}
+.glitch-effect::before,
+.glitch-effect::after {
+    content: attr(data-text); /* Requires data-text attribute on H1 */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    clip: rect(0, 0, 0, 0);
+}
+
+.player-status {
+    font-size: 1.5em;
+    margin-top: 15px;
+    padding: 5px 15px;
+    background-color: rgba(0, 255, 0, 0.1); /* 半透明綠色背景 */
+    border: 1px solid #00ff00;
+    display: inline-block;
+}
+
+/* --- Neon Button Styling --- */
+.neon-button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px 10px 10px 0;
+    background-color: transparent;
+    color: #00ffff;
+    text-decoration: none;
+    border: 2px solid #00ffff;
+    border-radius: 0; /* 方正的邊框 */
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: all 0.3s;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+}
+
+.neon-button:hover {
+    background-color: rgba(0, 255, 255, 0.1);
+    color: #00ff00;
+    border-color: #00ff00;
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.8);
+}
+
+.neon-button.secondary {
+    color: #00ff00;
+    border-color: #00ff00;
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+}
+
+.neon-button.secondary:hover {
+    background-color: rgba(0, 255, 0, 0.1);
+    color: #00ffff;
+    border-color: #00ffff;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.8);
+}
+
+/* --- Banlist Table Style --- */
+.banlist-table {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.banlist-table li {
+    display: grid;
+    grid-template-columns: 2fr 3fr 1fr;
+    padding: 10px;
+    border-bottom: 1px dashed rgba(255, 255, 255, 0.2);
+}
+
+.banlist-table .table-header {
+    font-weight: bold;
+    color: #00ff00;
+    border-bottom: 2px solid #00ff00;
+    margin-bottom: 5px;
+}
+
+/* --- Input/Search --- */
+input[type="text"] {
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 1px solid #00ffff;
+    color: #fff;
+    padding: 8px;
+    margin-right: 10px;
+}
+
+/* --- Login --- */
+/* --- Login/Sign Up Form Styles (Sci-Fi Terminal) --- */
+
+.large-panel {
+    max-width: 500px; /* 限制表單寬度 */
+    margin: 50px auto;
+}
+
+.tab-buttons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 25px;
+}
+
+.tab-buttons .neon-button {
+    flex-grow: 1;
+    margin: 0 5px;
+    opacity: 0.6;
+}
+
+.tab-buttons .neon-button.active {
+    opacity: 1;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.8);
+    background-color: rgba(0, 255, 255, 0.1);
+}
+
+.tab-buttons .neon-button.active.secondary {
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.8);
+    background-color: rgba(0, 255, 0, 0.1);
+}
+
+.auth-form {
+    padding-top: 15px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+.auth-form input[type="text"],
+.auth-form input[type="password"],
+.auth-form input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    background-color: #000; /* 輸入框背景為黑 */
+    border: 1px solid #00ffff;
+    color: #fff;
+    font-size: 1em;
+    font-family: 'Consolas', monospace;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.auth-form input:focus {
+    outline: none;
+    border-color: #00ff00;
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.6); /* 聚焦時發出綠光 */
+}
+
+.submit-button {
+    width: 100%;
+    font-size: 1.2em;
+    padding: 15px;
+    margin-top: 10px;
+}
+
+.hidden {
+    display: none;
+}

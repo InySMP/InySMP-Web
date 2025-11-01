@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InySMP - Nexus Terminal</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <nav class="navbar">
+    <div class="nav-links">
+        <a href="main.html">HOME</a>
+        <span class="separator">|</span>
+        <a href="#news">NEWS</a>
+        <span class="separator">|</span>
+        <a href="#account">ACCOUNT</a>
+        <span class="separator">|</span>
+        <a href="banlist.html">BANLIST</a>
+        </div>
+</nav>
+
+    <div class="main-content">
+        
+        <header class="hero-section">
+            <h1 class="hero-title glitch-effect" data-text="InySMP">
+                <span class="aqua animated-text">Iny</span><span class="green animated-text">SMP</span>
+            </h1>
+        </header>
+
+        <section id="news" class="terminal-panel">
+            <h2>📰 // SYSTEM LOG: NEWS FEED</h2>
+            <article class="news-item">
+                <h3 class="aqua">// PATCH 1.0.3 DEPLOYED</h3>
+                <p>New warp points and anti-grief protocols are now active. Please report any anomalies.</p>
+                <span class="log-date">-- [2025-11-01]</span>
+            </article>
+            <article class="news-item">
+                <h3 class="green">// SEASON 2 STARTING SOON</h3>
+                <p>Prepare for a full server reset and new world generation in the next cycle.</p>
+                <span class="log-date">-- [2025-12-01]</span>
+            </article>
+        </section>
+
+        <section class="terminal-panel">
+            <h2>🔍 // DATA REQUEST: PLAYER INVENTORY</h2>
+            <p class="error-text">WARNING: Direct inventory access requires high-level clearance (API Integration required).</p>
+            <input type="text" id="player-search" placeholder="ENTER MC ID (e.g. Notch)">
+            <button class="neon-button" onclick="searchInventory()">QUERY</button>
+            <div id="inventory-display">
+                </div>
+        </section>
+
+    </div>
+
+</body>
+</html>
