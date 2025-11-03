@@ -15,6 +15,7 @@ body {
 }
 
 /* --- Colors and Neon Glow --- */
+.white { color:white; }
 .aqua { color: #00ffff; } 
 .green { color: #00ff00; } 
 .red { color: red; }
@@ -317,7 +318,7 @@ a:hover {
     position: relative;
 }
 
-.back {
+.back button{
     padding: 15px;
     background-color: rgba(0, 0, 0, 0.62);
     border: 1px solid #00ffff; /* 霓虹邊框 */
@@ -325,10 +326,10 @@ a:hover {
     border-radius: 4px;
     font-weight: bold;
     transition: color 0.3s;
-    text-transform: uppercase;
+    text-transform: none;
 }
 
-.back a:hover{
+button:hover{
     color: #00ffff78; /* 懸停變為霓虹綠 */
     text-shadow: 0 0 10px #00ffff;
 }
