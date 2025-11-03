@@ -22,13 +22,19 @@ body {
 .black { color:black; }
 
 /* --- Media Colors --- */
+.media-title {
+    color: red;
+}
+
 .yt { color: red; }
+.dc { color: aqua; }
+.ig { color:rgb(255, 99, 125) }
 
 .neon-glow {
     /* 應用霓虹光暈效果 */
     text-shadow: 
         0 0 5px #00ffff,
-        0 0 10px #00ff00; 
+        0 0 10px #ffffff; 
 }
 
 /* --- Navbar Styling (置中點分隔) --- */
@@ -38,7 +44,7 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(201, 201, 201, 0.459);
     display: flex;
     justify-content: center; /* 置中導航連結 */
     align-items: center;
@@ -63,8 +69,8 @@ body {
 }
 
 .navbar a:hover {
-    color: #00ff00; /* 懸停變為霓虹綠 */
-    text-shadow: 0 0 10px #00ff00;
+    color: #00ffff; /* 懸停變為霓虹綠 */
+    text-shadow: 0 0 10px #00ffff;
 }
 
 .separator {
@@ -81,7 +87,7 @@ body {
 }
 
 .terminal-panel {
-    background-color: rgba(10, 20, 30, 0.9); /* 較深的背景 */
+    background-color: rgba(0, 0, 0, 0.31); /* 較深的背景 */
     padding: 25px;
     margin-bottom: 30px;
     border: 1px solid #00ffff; /* 霓虹邊框 */
@@ -89,16 +95,6 @@ body {
     border-radius: 4px;
     overflow: hidden;
     position: relative;
-}
-
-/* 終端機光標動畫 */
-.terminal-panel::before {
-    content: '_';
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    color: #00ff00;
-    animation: blink-cursor 1s step-end infinite;
 }
 
 @keyframes blink-cursor {
@@ -122,7 +118,7 @@ body {
 /* 動畫/脈衝效果保持不變 */
 @keyframes pulse {
     0% { transform: scale(1); opacity: 1; text-shadow: 0 0 5px #00ffff; }
-    50% { transform: scale(1.05); opacity: 0.8; text-shadow: 0 0 20px #00ff00; }
+    50% { transform: scale(1.05); opacity: 0.8; text-shadow: 0 0 20px #00ffff; }
     100% { transform: scale(1); opacity: 1; text-shadow: 0 0 5px #00ffff; }
 }
 .animated-text {
@@ -146,15 +142,6 @@ body {
     clip: rect(0, 0, 0, 0);
 }
 
-.player-status {
-    font-size: 1.5em;
-    margin-top: 15px;
-    padding: 5px 15px;
-    background-color: rgba(0, 255, 0, 0.1); /* 半透明綠色背景 */
-    border: 1px solid #00ff00;
-    display: inline-block;
-}
-
 /* --- Neon Button Styling --- */
 .neon-button {
     display: inline-block;
@@ -173,14 +160,14 @@ body {
 
 .neon-button:hover {
     background-color: rgba(0, 255, 255, 0.1);
-    color: #00ff00;
-    border-color: #00ff00;
+    color: #32e0ff;
+    border-color: #32e0ff;
     box-shadow: 0 0 20px rgba(0, 255, 0, 0.8);
 }
 
 .neon-button.secondary {
-    color: #00ff00;
-    border-color: #00ff00;
+    color: #32e0ff;
+    border-color: #32e0ff;
     box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
 }
 
@@ -214,9 +201,9 @@ body {
 
 /* --- Input/Search --- */
 input[type="text"] {
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.267);
     border: 1px solid #00ffff;
-    color: #fff;
+    color: #ffffff;
     padding: 8px;
     margin-right: 10px;
 }
@@ -273,7 +260,7 @@ input[type="text"] {
     width: 100%;
     padding: 10px;
     box-sizing: border-box;
-    background-color: #000; /* 輸入框背景為黑 */
+    background-color: #989898b1; /* 輸入框背景為黑 */
     border: 1px solid #00ffff;
     color: #fff;
     font-size: 1em;
@@ -299,6 +286,18 @@ input[type="text"] {
 }
 
 a {
-    color: rgb(0, 157, 255);
+    color: rgb(0, 195, 255);
     text-decoration: none;
+}
+
+/* --- Push Log --- */
+.push-log {
+    background-color: rgba(0, 0, 0, 0.31); /* 較深的背景 */
+    padding: 25px;
+    margin-bottom: 30px;
+    border: 1px solid #00ffff; /* 霓虹邊框 */
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.4);
+    border-radius: 4px;
+    overflow: hidden;
+    position: relative;
 }
