@@ -27,8 +27,19 @@ body {
 }
 
 .yt { color: red; }
+.yt:hover {
+    color: yellow;
+}
+
 .dc { color: aqua; }
+.dc:hover {
+    color: yellow;
+}
+
 .ig { color:rgb(255, 99, 125) }
+.ig:hover {
+    color: yellow;
+}
 
 .neon-glow {
     /* 應用霓虹光暈效果 */
@@ -44,7 +55,7 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    background-color: rgba(201, 201, 201, 0.459);
+    background-color: rgb(0, 0, 0);
     display: flex;
     justify-content: center; /* 置中導航連結 */
     align-items: center;
@@ -290,9 +301,13 @@ a {
     text-decoration: none;
 }
 
+a:hover {
+    color:yellow;
+}
+
 /* --- Push Log --- */
 .push-log {
-    background-color: rgba(0, 0, 0, 0.31); /* 較深的背景 */
+    background-color: rgba(0, 0, 0, 0.741); /* 較深的背景 */
     padding: 25px;
     margin-bottom: 30px;
     border: 1px solid #00ffff; /* 霓虹邊框 */
@@ -300,4 +315,20 @@ a {
     border-radius: 4px;
     overflow: hidden;
     position: relative;
+}
+
+.back {
+    padding: 15px;
+    background-color: rgba(0, 0, 0, 0.62);
+    border: 1px solid #00ffff; /* 霓虹邊框 */
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.4);
+    border-radius: 4px;
+    font-weight: bold;
+    transition: color 0.3s;
+    text-transform: uppercase;
+}
+
+.back a:hover{
+    color: #00ffff78; /* 懸停變為霓虹綠 */
+    text-shadow: 0 0 10px #00ffff;
 }
